@@ -1,0 +1,174 @@
+{
+  "summary": {
+    "accuracy": 0.95,
+    "precision_per_class": {
+      "good": 0.9090909090909091,
+      "bad": 1.0
+    },
+    "recall_per_class": {
+      "good": 1.0,
+      "bad": 0.9
+    },
+    "f1_score_per_class": {
+      "good": 0.9523809523809523,
+      "bad": 0.9473684210526315
+    },
+    "roc_auc": 1.0,
+    "pr_auc": 0.9999999999999999,
+    "confusion_matrix": [
+      [
+        10,
+        0
+      ],
+      [
+        1,
+        9
+      ]
+    ],
+    "wrong_images": [
+      "bad/052.JPG"
+    ]
+  },
+  "per_image": {
+    "good/360.JPG": {
+      "prediction": "good",
+      "probabilities": {
+        "good": 0.9998339414596558,
+        "bad": 0.00016607489669695497
+      }
+    },
+    "good/361.JPG": {
+      "prediction": "good",
+      "probabilities": {
+        "good": 0.9998786449432373,
+        "bad": 0.00012128196976846084
+      }
+    },
+    "good/363.JPG": {
+      "prediction": "good",
+      "probabilities": {
+        "good": 0.9998898506164551,
+        "bad": 0.00011012558388756588
+      }
+    },
+    "good/362.JPG": {
+      "prediction": "good",
+      "probabilities": {
+        "good": 0.9998200535774231,
+        "bad": 0.0001800134195946157
+      }
+    },
+    "good/366.JPG": {
+      "prediction": "good",
+      "probabilities": {
+        "good": 0.9998676776885986,
+        "bad": 0.0001322561874985695
+      }
+    },
+    "good/365.JPG": {
+      "prediction": "good",
+      "probabilities": {
+        "good": 0.9998718500137329,
+        "bad": 0.00012816977687180042
+      }
+    },
+    "good/359.JPG": {
+      "prediction": "good",
+      "probabilities": {
+        "good": 0.99985671043396,
+        "bad": 0.0001432397693861276
+      }
+    },
+    "good/358.JPG": {
+      "prediction": "good",
+      "probabilities": {
+        "good": 0.9997634291648865,
+        "bad": 0.00023651501396670938
+      }
+    },
+    "good/364.JPG": {
+      "prediction": "good",
+      "probabilities": {
+        "good": 0.999886155128479,
+        "bad": 0.00011386367987142876
+      }
+    },
+    "good/357.JPG": {
+      "prediction": "good",
+      "probabilities": {
+        "good": 0.9998729228973389,
+        "bad": 0.0001270604698220268
+      }
+    },
+    "bad/038.JPG": {
+      "prediction": "bad",
+      "probabilities": {
+        "good": 3.552042835508473e-05,
+        "bad": 0.9999644756317139
+      }
+    },
+    "bad/062.JPG": {
+      "prediction": "bad",
+      "probabilities": {
+        "good": 4.78004731121473e-05,
+        "bad": 0.9999521970748901
+      }
+    },
+    "bad/077.JPG": {
+      "prediction": "bad",
+      "probabilities": {
+        "good": 0.00014614671817980707,
+        "bad": 0.9998538494110107
+      }
+    },
+    "bad/099.JPG": {
+      "prediction": "bad",
+      "probabilities": {
+        "good": 2.477111956977751e-05,
+        "bad": 0.9999752044677734
+      }
+    },
+    "bad/065.JPG": {
+      "prediction": "bad",
+      "probabilities": {
+        "good": 1.617555972188711e-05,
+        "bad": 0.9999837875366211
+      }
+    },
+    "bad/068.JPG": {
+      "prediction": "bad",
+      "probabilities": {
+        "good": 2.1264435417833738e-05,
+        "bad": 0.99997878074646
+      }
+    },
+    "bad/057.JPG": {
+      "prediction": "bad",
+      "probabilities": {
+        "good": 0.0048799519427120686,
+        "bad": 0.9951199889183044
+      }
+    },
+    "bad/095.JPG": {
+      "prediction": "bad",
+      "probabilities": {
+        "good": 1.1956793969147839e-05,
+        "bad": 0.9999880790710449
+      }
+    },
+    "bad/052.JPG": {
+      "prediction": "good",
+      "probabilities": {
+        "good": 0.7215555310249329,
+        "bad": 0.2784445583820343
+      }
+    },
+    "bad/025.JPG": {
+      "prediction": "bad",
+      "probabilities": {
+        "good": 1.8459271814208478e-05,
+        "bad": 0.9999815225601196
+      }
+    }
+  }
+}

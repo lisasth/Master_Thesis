@@ -1,0 +1,120 @@
+product,gen_model,image_type,image_filename,real_caption,syn_caption,similarity_score
+Croissants,GAN,IO,0.png,this is a picture of a triangle with a pink spot on it,there is a triangle with a pink dot on it on a blue surface,0.7775975465774536
+Croissants,GAN,IO,1.png,this is a picture of a triangle with a pink dot on it,this is a picture of a triangular sign with a pink dot on it,0.8888688087463379
+Croissants,GAN,IO,10.png,this is a picture of a triangle with a pink spot on it,this is a picture of a triangle with a pink spot on it,1.0000001192092896
+Croissants,GAN,IO,11.png,this is a picture of a triangle with a pink spot on it,this is a picture of a triangle with a pink dot on it,0.9090173244476318
+Croissants,GAN,IO,12.png,this is a picture of a piece of paper with a piece of meat on it,this is a picture of a triangle with a pink dot on it,0.3912675678730011
+Croissants,GAN,IO,13.png,this is a picture of a triangle with a pink dot on it,there is a piece of paper that has a pink object in it,0.5010206699371338
+Croissants,GAN,IO,14.png,this is a picture of a triangular sign with a pink dot on it,this is a picture of a triangle with a pink dot on it,0.8888688087463379
+Croissants,GAN,IO,2.png,there is a triangle with a pink dot on it on a blue surface,there is a triangle with a pink dot on it on a blue surface,0.9999999403953552
+Croissants,GAN,IO,3.png,this is a picture of a triangle with a pink object in it,there is a triangle shaped object with a pink oval on it,0.8806861042976379
+Croissants,GAN,IO,4.png,this is a picture of a piece of paper with a pink spot on it,there is a triangle with a pink dot on it on a blue surface,0.5529361963272095
+Croissants,GAN,IO,5.png,this is a picture of a triangular sign with a ham on it,this is a picture of a triangular sign with a pink circle on it,0.6982163190841675
+Croissants,GAN,IO,6.png,this is a picture of a triangular shaped sticker with a fingerprint on it,there is a triangle with a pink dot on it on a blue surface,0.48680686950683594
+Croissants,GAN,IO,7.png,this is a picture of a triangular sign with a picture of a cat on it,this is a picture of a triangular sign with a pink dot on it,0.7377802133560181
+Croissants,GAN,IO,8.png,this is a picture of a triangular sign with a pink dot on it,there is a triangle shaped object with a pink oval on it,0.6544363498687744
+Croissants,GAN,IO,9.png,there is a triangle with a pink substance on it,there is a triangle with a pink dot on it on a blue surface,0.7943256497383118
+Croissants,GAN,NIO,0.png,there is a piece of paper that has a piece of meat on it,there is a close up of a tooth with a toothbrush in it,0.3576367497444153
+Croissants,GAN,NIO,1.png,this is a picture of a triangular shaped sticker with a fingerprint on it,this is a picture of a close up of a triangular shaped object,0.6176908016204834
+Croissants,GAN,NIO,10.png,there is a piece of paper with a piece of food on it,this is a picture of a triangle with a pink dot on it,0.21848157048225403
+Croissants,GAN,NIO,11.png,there is a piece of paper with a piece of ham on it,there is a close up of a triangle with a pink lip on it,0.27077969908714294
+Croissants,GAN,NIO,12.png,there is a piece of paper with a triangle on top of it,there is a paper triangle with a bowl on top of it,0.7974492907524109
+Croissants,GAN,NIO,13.png,there are three pieces of paper that have been cut up to look like a fish,this is a close up of a piece of paper with a pink substance on it,0.4423021376132965
+Croissants,GAN,NIO,14.png,there is a piece of paper that has a pink spot on it,this is a picture of a piece of paper with a pink circle on it,0.7959442138671875
+Croissants,GAN,NIO,2.png,this is a picture of a piece of paper with a pink circle on it,this is a picture of a close up of a tooth on a blue surface,0.42813369631767273
+Croissants,GAN,NIO,3.png,there is a pink teddy bear sitting on top of a piece of paper,this is a picture of a piece of paper with a pink circle on it,0.49417829513549805
+Croissants,GAN,NIO,4.png,there is a triangle shaped object with a piece of meat on it,there is a triangular shaped object with a pink substance on it,0.5988177061080933
+Croissants,GAN,NIO,5.png,there is a piece of paper that has a face on it,this is a picture of a triangle with a pink dot on it,0.3444448709487915
+Croissants,GAN,NIO,6.png,this is a picture of a piece of paper with a piece of food on it,there is a piece of paper with a heart on top of it,0.5852009057998657
+Croissants,GAN,NIO,7.png,there is a small triangle shaped object with a pink dot on it,this is a picture of a triangular shaped object with a pink dot on it,0.8940214514732361
+Croissants,GAN,NIO,8.png,there is a piece of paper with a red circle on it,there is a piece of paper with a red heart on it,0.7611348628997803
+Croissants,GAN,NIO,9.png,this is a picture of a triangle shaped object with a pink object in the middle,there is a close up of a tooth with a toothbrush in it ' s mouth,0.2585810422897339
+Croissants,DM,IO,0.png,this is a picture of a triangle with a pink spot on it,there is a piece of paper that has a pink object on it,0.5647409558296204
+Croissants,DM,IO,1.png,this is a picture of a piece of paper with a pink dot on it,there is a picture of a triangle with a pink dot on it,0.7317319512367249
+Croissants,DM,IO,10.png,there is a triangle with a pink substance on it on a blue background,there is a triangle with a pink dot on it,0.823461651802063
+Croissants,DM,IO,11.png,this is a picture of a triangle with a pink dot on it,there is a picture of a triangle with a pink dot on it,0.9804004430770874
+Croissants,DM,IO,12.png,this is a picture of a triangle with a pink spot on it,there is a picture of a triangle with a pink dot on it,0.8977757692337036
+Croissants,DM,IO,13.png,this is a picture of a piece of paper with a piece of meat on it,there is a picture of a triangle with a pink dot on it,0.3832817077636719
+Croissants,DM,IO,14.png,this is a picture of a piece of paper with a pink dot on it,there is a picture of a triangular shaped object on a blue surface,0.46990805864334106
+Croissants,DM,IO,2.png,this is a picture of a triangle with a pink stone in it,there is a picture of a triangular sign with a pink dot on it,0.6757465600967407
+Croissants,DM,IO,3.png,there is a triangle with a pink dot on it on a blue surface,there is a pink stone in the middle of a triangle,0.6246013045310974
+Croissants,DM,IO,4.png,this is a picture of a triangle with a pink spot on it,an image of a triangle with a pink stone in the middle,0.7682446241378784
+Croissants,DM,IO,5.png,this is a picture of a piece of paper with a pink spot on it,this is a picture of a triangle with a pink dot on it,0.6328118443489075
+Croissants,DM,IO,6.png,this is a picture of a triangle with a piece of meat in it,there is a triangle with a pink dot on it on a blue background,0.5828535556793213
+Croissants,DM,IO,7.png,this is a picture of a sticker with a picture of a hamster on it,an image of a triangle with a pink dot on it,0.33598774671554565
+Croissants,DM,IO,8.png,this is a picture of a triangular sign with a fingerprint on it,there is a triangular sign with a pink stone in the middle of it,0.6235213279724121
+Croissants,DM,IO,9.png,this is a picture of a triangular sign with a pink dot on it,this is a picture of a triangular shaped object with a pink dot on it,0.8504037857055664
+Croissants,DM,NIO,0.png,this is a picture of a piece of paper with a piece of meat on it,this is a picture of a piece of paper with a pink object in it,0.6648316383361816
+Croissants,DM,NIO,1.png,this is a picture of a triangle shaped sticker with a piece of meat on it,there is a piece of paper with a pink dot on it,0.4869350790977478
+Croissants,DM,NIO,10.png,there is a close up of a piece of paper with a tongue sticking out of it,there is a piece of paper that has been folded up to look like a triangle,0.4890111982822418
+Croissants,DM,NIO,11.png,there is a piece of food that is on top of a piece of paper,there is a picture of a triangle with a pink dot on it,0.2143075168132782
+Croissants,DM,NIO,12.png,there is a piece of paper with a pink triangle on it,this is a picture of a piece of paper with a piece of meat in it,0.5647222399711609
+Croissants,DM,NIO,13.png,there is a close up of a piece of paper with a fish on it,this is a picture of a close up of a tooth on a blue background,0.4418662190437317
+Croissants,DM,NIO,14.png,there is a picture of some food that is on a blue table,there is a piece of paper with a red heart on it,0.22756212949752808
+Croissants,DM,NIO,2.png,this is a picture of a picture of a triangle with a shell on it,this is a picture of a piece of paper with a pink substance on it,0.37105509638786316
+Croissants,DM,NIO,3.png,there is a pink teddy bear sitting on top of a piece of paper,this is an image of a triangle made out of paper on a blue surface,0.2705996036529541
+Croissants,DM,NIO,4.png,there is a piece of paper with a pink heart on it,there is a picture of a triangle with a pink stone on it,0.4893040657043457
+Croissants,DM,NIO,5.png,there is a small piece of paper with a finger sticking out of it,there is a piece of paper that has a heart on it,0.6278629302978516
+Croissants,DM,NIO,6.png,this is a picture of a piece of paper with a piece of food on it,there is a piece of paper with a doughnut on it on a blue surface,0.6688244938850403
+Croissants,DM,NIO,7.png,this is a picture of a triangle shaped object with a pink object in the middle,there is a triangular shaped object with a pink stone in it,0.7904685735702515
+Croissants,DM,NIO,8.png,there is a picture of a doughnut and a donut on a piece of paper,there is a piece of paper that has a heart on it,0.37938612699508667
+Croissants,DM,NIO,9.png,this is a picture of a piece of paper with a nose sticking out of it,this is a picture of a triangle with a pink eye on it,0.4334310293197632
+Donuts,DM,IO,0.png,this is an image of a donut on a blue surface,this is an image of a donut on a blue surface,1.0
+Donuts,DM,IO,1.png,this is an image of a donut with a hole in the middle,there are two donuts that are sitting on a blue surface,0.5407272577285767
+Donuts,DM,IO,10.png,this is an image of a donut on a blue surface,there are three donuts that are sitting on a blue surface,0.6602028012275696
+Donuts,DM,IO,11.png,there are two donuts that are sitting on a blue surface,there are two donuts that are shaped like a face on a blue surface,0.8744794726371765
+Donuts,DM,IO,12.png,there is a donut that is sitting on a blue surface,there are two donuts that are sitting on a blue surface,0.8050926923751831
+Donuts,DM,IO,13.png,this is an image of a donut on a blue surface,there are two donuts that are sitting on a blue cloth,0.5526444911956787
+Donuts,DM,IO,14.png,this is an image of a donut on a blue background,there are two donuts that are sitting on a blue surface,0.6324602365493774
+Donuts,DM,IO,15.png,there are three donuts that are on a blue surface,there are four donuts that are sitting on a blue surface,0.9035434722900391
+Donuts,DM,IO,2.png,this is a picture of a donut on a blue surface,there are three donuts that are sitting on a blue surface,0.6985178589820862
+Donuts,DM,IO,3.png,this is an image of a donut on a blue surface,there are three donuts that are sitting on a blue surface,0.6602028012275696
+Donuts,DM,IO,4.png,this is a close up of a toilet with a blue seat,there are three donuts that are sitting on a blue surface,0.3717499375343323
+Donuts,DM,IO,5.png,there is a donut that is sitting in the middle of the floor,there are two donuts that are sitting on a blue surface,0.6399055123329163
+Donuts,DM,IO,6.png,this is an image of a donut on a blue background,this is a picture of a donut with a hole in it,0.7391761541366577
+Donuts,DM,IO,7.png,there is a donut that is sitting on a blue surface,there are three donuts that are sitting on a blue surface,0.7924979329109192
+Donuts,DM,IO,8.png,there are two donuts that are sitting on a blue cloth,there are two donuts that are sitting on a blue cloth,1.0
+Donuts,DM,IO,9.png,this is an image of a donut on a blue surface,this is an image of a donut on a blue surface,1.0
+Donuts,DM,NIO,0.png,there is a picture of a teddy bear laying on a blue blanket,there are two donuts that are sitting on a blue surface,0.26584592461586
+Donuts,DM,NIO,1.png,there is a close up of some kind of fruit on a blue surface,there is a half eaten dough on a blue plate with a bite taken out of it,0.37674680352211
+Donuts,DM,NIO,10.png,there is a close up of a cookie with a smiley face on it,there is a donut that has been cut in half and is sitting on a blue plate,0.2928949296474457
+Donuts,DM,NIO,11.png,there are three doughnuts that are sitting on a blue cloth,there are four donuts that are sitting on a blue surface,0.765671968460083
+Donuts,DM,NIO,12.png,there are three donuts that are sitting on a blue cloth,there is a close up of a doughnut shaped like an infinity sign,0.3857204020023346
+Donuts,DM,NIO,13.png,there are three cookies on a blue plate with a blue background,there are two doughnuts on a blue plate on a table,0.5651974678039551
+Donuts,DM,NIO,14.png,there are three donuts that are sitting on a blue cloth,there is a white object with a hole in it on a blue surface,0.25608402490615845
+Donuts,DM,NIO,15.png,there are three donuts that are sitting on a blue cloth,this is an image of an egg on a blue surface,0.25273099541664124
+Donuts,DM,NIO,2.png,there is a close up of a tooth that has been cut in half,there are two doughnuts that are sitting on a blue surface,0.20860856771469116
+Donuts,DM,NIO,3.png,there are two pieces of bread that are on a blue table,there is a cookie shaped like a fish on a blue surface,0.5124583840370178
+Donuts,DM,NIO,4.png,there are two peeled bananas that are sitting on a blue curtain,there is a piece of bread that is sitting on a blue plate,0.3375478982925415
+Donuts,DM,NIO,5.png,there are two stuffed animals that are laying on a blue blanket,there are two apples that are sitting on a blue towel,0.3381524384021759
+Donuts,DM,NIO,6.png,there are two little white mice that are on a blue blanket,there are two pieces of bread that have been cut in half,0.20019306242465973
+Donuts,DM,NIO,7.png,there are two cookies on a blue plate on a blue table,there is a doughnut with a hole in the middle of it on a blue surface,0.4359780251979828
+Donuts,DM,NIO,8.png,there are two donuts that are sitting on a blue cloth,this is a close up of a doughnut with a hole in the middle,0.46875572204589844
+Donuts,DM,NIO,9.png,there is a close up of a pair of doughnuts on a blue cloth,there are two cookies that are shaped like a snake on a blue blanket,0.535388171672821
+Donuts,GAN,IO,0.png,this is an image of a donut on a blue surface,this is an image of a donut with a hole in it,0.7574688196182251
+Donuts,GAN,IO,1.png,this is a picture of a donut with a hole in it,there is a donut that is sitting on a blue surface,0.6977530717849731
+Donuts,GAN,IO,10.png,there are three donuts that are sitting on a blue surface,there are two donuts that are sitting on a blue surface,0.9198081493377686
+Donuts,GAN,IO,11.png,there is a close up of a bunch of bananas on a rack,there are three donuts that are sitting on a blue surface,0.26612991094589233
+Donuts,GAN,IO,12.png,there are three donuts sitting on a blue surface next to each other,there is a donut that is sitting on a blue surface,0.7609480023384094
+Donuts,GAN,IO,2.png,there are three donuts that are sitting on a blue surface,there are three donuts that are sitting on a blue surface,1.0
+Donuts,GAN,IO,3.png,there are three donuts that are sitting on a blue surface,there are three donuts that are sitting on a blue surface,1.0
+Donuts,GAN,IO,4.png,there are three donuts sitting on a blue surface next to each other,there are two donuts sitting on a blue surface with a blue background,0.8910938501358032
+Donuts,GAN,IO,5.png,this is an image of a donut on a blue background,this is an image of a donut with a hole in it,0.7656914591789246
+Donuts,GAN,IO,6.png,this is an image of a donut on a blue surface,there is a picture of a donut that is on a blue surface,0.9488603472709656
+Donuts,GAN,IO,7.png,this is a picture of a donut with a hole in it,this is an image of a donut on a blue surface,0.7244277596473694
+Donuts,GAN,IO,8.png,this is an image of a donut on a blue surface,this is an image of a donut on a blue surface,1.0
+Donuts,GAN,IO,9.png,there are three donuts that are sitting on a blue surface,there are two donuts that are sitting on a blue surface,0.9198081493377686
+Donuts,GAN,NIO,0.png,there is a donut that is sitting on a blue surface,there are two doughnuts that are sitting on a blue surface,0.7548307776451111
+Donuts,GAN,NIO,1.png,there are two apples that are sitting on a blue table,three pieces of bread sitting on top of a blue surface,0.4167896509170532
+Donuts,GAN,NIO,10.png,there are three cookies that are sitting on a blue surface,there are two cookies that are sitting on a blue surface,0.9305631518363953
+Donuts,GAN,NIO,11.png,this is an image of a close up of a banana on a blue background,there is a picture of a teddy bear that is laying on a blanket,0.31042104959487915
+Donuts,GAN,NIO,12.png,there is a close up of a pair of doughnuts on a blue cloth,there are four balls of wool sitting on a blue cloth,0.4217660427093506
+Donuts,GAN,NIO,13.png,there are two donuts that are sitting next to each other,there is a close up of a stuffed animal on a blue surface,0.22054265439510345
+Donuts,GAN,NIO,2.png,there is a donut that is sitting on a blue plate,there are two donuts that are sitting on a blue plate,0.8374159336090088
+Donuts,GAN,NIO,3.png,there is a close up of a cookie with a bite taken out of it,there are three apples that are sitting on a blue cloth,0.22215750813484192
+Donuts,GAN,NIO,4.png,there are two donuts that are sitting on a blue surface,there are three apples that are sitting on a blue plate,0.39366811513900757
+Donuts,GAN,NIO,5.png,there is a close up of a cookie that has been cut in half,there are two doughnuts that are sitting on a blue surface,0.35928875207901
+Donuts,GAN,NIO,6.png,there are three donuts that are sitting on a blue surface,there are three pieces of bread sitting on a blue surface,0.602529764175415
+Donuts,GAN,NIO,7.png,there are two doughnuts that are sitting on a blue plate,there are three apples that are sitting on a blue surface,0.3892987370491028
+Donuts,GAN,NIO,8.png,there is a close up of a plate of cookies with a bite taken out of it,there are three pieces of bread sitting on top of a blue table,0.3581385910511017
+Donuts,GAN,NIO,9.png,there are three doughnuts on a blue plate on a table,there are three potatoes that are sitting on a blue surface,0.5368375778198242

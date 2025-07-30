@@ -1,0 +1,7 @@
+system,type,TFIDF_sim,STS_sim,aligned_samples
+BLIP,io,0.309,0.74,55
+BLIP,nio,0.176,0.495,61
+Florence2,io,0.296,0.689,55
+Florence2,nio,0.187,0.606,61
+BLIP-LoRA,io,0.561,0.87,55
+BLIP-LoRA,nio,0.383,0.802,61

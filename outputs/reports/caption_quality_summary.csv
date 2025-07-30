@@ -1,0 +1,13 @@
+system,domain,avg_caption_length,avg_defect_keywords,num_samples
+BLIP,real_io,11.01,0.11,80
+BLIP,real_nio,11.36,0.04,80
+BLIP,syn_io,11.24,0.06,80
+BLIP,syn_nio,11.62,0.32,79
+Florence2,real_io,49.11,0.28,80
+Florence2,real_nio,49.28,0.01,80
+Florence2,syn_io,51.75,0.18,80
+Florence2,syn_nio,53.7,0.35,79
+BLIP-LoRA,real_io,26.95,1.0,80
+BLIP-LoRA,real_nio,27.34,1.75,80
+BLIP-LoRA,syn_io,25.64,0.96,80
+BLIP-LoRA,syn_nio,25.56,1.76,79
