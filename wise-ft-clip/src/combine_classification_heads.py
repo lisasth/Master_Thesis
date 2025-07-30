@@ -1,0 +1,163 @@
+import numpy as np
+import torch
+import torch.nn as nn
+from src.models.modeling import ImageClassifier
+from src.args import parse_arguments
+from src.datasets.common import maybe_dictionarize, get_dataset
+from src.models import utils
+from tqdm import tqdm
+from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, ConfusionMatrixDisplay, classification_report
+import matplotlib.pyplot as plt
+import os
+import re
+from src.models.utils import MLPHead, get_backbone_and_embedding_dim, torch_load, attach_head_to_model
+
+
+def find_largest_pt_file(folder_path):
+    max_number = -1
+    largest_file = None
+    
+    # Match files ending with ".pt" and containing numbers
+    pattern = re.compile(r'.*_(\d+)\.pt$')
+    
+    for root, _, files in os.walk(folder_path):
+        for file in files:
+            match = pattern.match(file)
+            if match:
+                number = int(match.group(1))
+                if number > max_number:
+                    max_number = number
+                    largest_file = os.path.join(root, file)
+    
+    return largest_file
+
+
+def calculate_top_4_acc(val_gts, preds_logits):
+    top_4_predictions = np.argsort(preds_logits, axis=1)[:, -4:]
+    num_samples = len(top_4_predictions)
+    num_correct = 0
+    for i in range(num_samples):
+        if val_gts[i] in top_4_predictions[i]:
+            num_correct += 1
+    top_4_acc = num_correct / num_samples
+    return top_4_acc
+
+
+def combine_mlp_heads(class_heads_list):
+    class_heads = []
+    for single_class_head_path in class_heads_list:
+        single_class_head = utils.torch_load(single_class_head_path)
+        class_heads.append(single_class_head)
+    single_hidden_dim = class_heads[0].classifier[0].out_features
+    input_dim = class_heads[0].classifier[0].in_features
+    hidden_dim = single_hidden_dim * len(class_heads)
+    output_dim = len(class_heads)
+    combined_class_heads = MLPHead(input_dim, hidden_dim, output_dim)
+    with torch.no_grad():
+        first_layer_weight = torch.cat([class_head.classifier[0].weight for class_head in class_heads], dim=0)
+        first_layer_bias = torch.cat([class_head.classifier[0].bias for class_head in class_heads], dim=0)
+        combined_class_heads.classifier[0].weight.copy_(first_layer_weight)
+        combined_class_heads.classifier[0].bias.copy_(first_layer_bias)
+
+        second_layer_weight = torch.zeros_like(combined_class_heads.classifier[2].weight)
+        for i, class_head in enumerate(class_heads):
+            second_layer_weight[i][i*single_hidden_dim:(i+1)*single_hidden_dim] = class_head.classifier[2].weight
+        second_layer_bias = torch.cat([class_head.classifier[2].bias for class_head in class_heads], dim=0)
+        combined_class_heads.classifier[2].weight.copy_(second_layer_weight)
+        combined_class_heads.classifier[2].bias.copy_(second_layer_bias)
+
+    return combined_class_heads
+
+def combine_classification_heads(args):
+    class_heads_list = []
+    with open(args.classes_list_path, "r") as f:
+        for line in f:
+            fnv_class = line.rstrip()
+            class_head_folder = os.path.join(args.class_heads_folder_path, fnv_class)
+            best_model = find_largest_pt_file(class_head_folder)
+            if best_model is None:
+                raise ValueError(f"Best model for class {fnv_class} is not found")
+            class_heads_list.append(best_model)
+            
+
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    # Load models
+
+    finetuned = torch_load(args.load)
+    combined_class_head = combine_mlp_heads(class_heads_list)
+    combined_image_classifier = attach_head_to_model(args.model_type, combined_class_head, finetuned)
+    combined_image_classifier.eval()
+    combined_image_classifier.to(device)
+
+    # Validation
+    all_preds = []
+    all_targets = []
+    val_scores = []
+    num_samples_val = 0.
+    correct_samples_val = 0.
+
+    print("Starting evaluation")
+    args.eval_sample_file_path = os.path.join(args.eval_sample_files_folder_path, f"overall_balanced.json")
+    val_dataset = get_dataset(args, is_train=False)
+    val_dataloader = val_dataset.data_loader
+
+    with torch.no_grad():
+        for batch in tqdm(val_dataloader):
+            batch = maybe_dictionarize(batch)
+            inputs = batch["images"].to(device)
+            outputs = combined_image_classifier(inputs)
+            labels = batch['labels'].to(device)
+            probabilities = torch.sigmoid(outputs)
+            max_prob, preds = torch.max(probabilities, 1)
+
+            correct_num_batch = (preds == labels).float().sum()
+            all_num_batch = len(preds)
+            num_samples_val += all_num_batch
+            correct_samples_val += correct_num_batch
+
+            all_preds.extend(preds.detach().cpu().numpy())
+            all_targets.extend(labels.cpu().numpy().reshape(-1))
+            val_scores.append(outputs.detach().cpu().numpy())
+    all_preds = np.array(all_preds)
+    all_targets = np.array(all_targets)
+    all_logits = np.concatenate(val_scores, axis=0)
+
+    # Calculate accuracy, F1 score, and confusion matrix
+    accuracy_manual = correct_samples_val/num_samples_val
+    accuracy = accuracy_score(all_targets, all_preds)
+    top_4_acc = calculate_top_4_acc(all_targets, all_logits)
+    f1 = f1_score(all_targets, all_preds, average='weighted')
+    idx_to_class_name = {}
+    with open(args.classes_list_path, "r") as f:
+        for index, line in enumerate(f):
+            idx_to_class_name[index] = line.rstrip()
+    labels = [i for i in range(len(idx_to_class_name))]
+    target_names = [idx_to_class_name[idx] for idx in labels]
+    cm = confusion_matrix(all_targets, all_preds, labels=labels)
+    cm_display = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=target_names).plot()
+    fig, ax = plt.subplots(figsize=(25, 25))
+    cm_display.plot(ax=ax)
+    plt.xticks(rotation=90)
+    plt.tight_layout()
+    print(classification_report(all_targets, all_preds, target_names=target_names, labels=labels))
+
+    print(f'Accuracy: {accuracy:.4f}')
+    print(f'Accuracy_manual_cal: {accuracy_manual:.4f}')
+    print(f'Top4 Accuracy: {top_4_acc:.4f}')
+    print(f'F1 Score (weighted): {f1:.4f}')
+    print('Confusion Matrix:')
+    print(cm)
+
+    if args.save is not None:
+        os.makedirs(args.save, exist_ok=True)
+        model_path = os.path.join(args.save, f'checkpoint_heads_combined.pt')
+        print('Saving model with combined classification heads to', model_path)
+        utils.torch_save(combined_image_classifier, model_path)
+        save_cm_path = os.path.join(args.save, "confusion_matrix" + ".png")
+        plt.savefig(save_cm_path, dpi=300)
+
+
+if __name__ == '__main__':
+    args = parse_arguments()
+    combine_classification_heads(args)

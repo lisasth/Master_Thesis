@@ -1,0 +1,18 @@
+trigger: none
+
+resources:
+  repositories:
+    - repository: azure-pipelines
+      type: git
+      name: azure-pipelines
+
+parameters:
+  - name: DOCKER_IMAGE_TAG
+    type: string
+
+extends:
+  template: build-docker-image-template.yaml@azure-pipelines
+  parameters:
+    DOCKER_IMAGE_NAME: fnv-wise-ft
+    DOCKER_FILE_NAME: Dockerfile
+    DOCKER_IMAGE_TAG: ${{ parameters.DOCKER_IMAGE_TAG }}
