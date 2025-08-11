@@ -1,0 +1,89 @@
+job: extension
+config:
+  name: cashew_lora
+  process:
+  - type: sd_trainer
+    training_folder: output
+    device: cuda:0
+    trigger_word: imperfection
+    network:
+      type: lora
+      linear: 32
+      linear_alpha: 32
+    save:
+      dtype: float16
+      save_every: 100
+      max_step_saves_to_keep: 4
+      push_to_hub: false
+    datasets:
+    - folder_path: /home/ubuntu/cashew_lora
+      caption_ext: txt
+      caption_dropout_rate: 0.05
+      shuffle_tokens: false
+      cache_latents_to_disk: true
+      resolution:
+      - 512
+      - 768
+      - 1024
+    train:
+      batch_size: 1
+      steps: 2000
+      gradient_accumulation_steps: 1
+      train_unet: true
+      train_text_encoder: false
+      gradient_checkpointing: true
+      noise_scheduler: flowmatch
+      optimizer: adamw8bit
+      lr: 0.0001
+      skip_first_sample: true
+      ema_config:
+        use_ema: true
+        ema_decay: 0.99
+      dtype: bf16
+    model:
+      name_or_path: black-forest-labs/FLUX.1-dev
+      is_flux: true
+      quantize: true
+    sample:
+      sampler: flowmatch
+      sample_every: 250
+      width: 1024
+      height: 1024
+      prompts:
+      - A highly detailed macro photograph from a top-down perspective captures a
+        single, perfectly formed, cashew-shaped cracker with a smooth, matte surface
+        and a uniform light golden-beige color, free of any significant cracks, holes,
+        or deformities, resting on a textured, non-reflective, dark gray background.
+      - A highly detailed macro photograph from a top-down perspective captures a
+        single, whole, roasted cashew nut with a smooth, matte, golden-beige surface
+        and a small [imperfection] on its right side, casting a subtle shadow on a
+        textured, non-reflective, dark gray background.
+      - A highly detailed macro photograph from a top-down perspective shows a single,
+        whole, roasted cashew nut with a smooth, golden-yellow surface, marked by
+        a small black speck and a slight [imperfection] on its left side, casting
+        a faint shadow on a textured, non-reflective, dark gray background.
+      - A highly detailed macro photograph from a top-down perspective captures a
+        single, cashew nut with a smooth, matte, golden-orange surface, featuring
+        a distinct circular [imperfection] on its right side, resting on a textured,
+        non-reflective, dark gray background.
+      - A highly detailed macro photograph from a top-down perspective captures a
+        severely malformed cashew nut, appearing as two fused and overlapping pieces
+        that create an irregular shape with uneven, toasted brown coloring along the
+        raised edges, resting on a textured, non-reflective, dark gray background.
+      - A highly detailed macro photograph from a top-down perspective captures a
+        malformed, cashew nut composed of two fused pieces forming a distinct S-curve,
+        featuring a shiny, golden-brown finish on its raised edges and a rough, jagged
+        texture along its bottom, all resting on a non-reflective, dark gray textured
+        background.
+      - A highly detailed macro photograph from a top-down perspective captures a
+        single, severely malformed cashew nut twisted into a tight S-shape with its
+        body folded over onto itself, featuring a small dark speck lodged in the central
+        crevice, all resting on a textured, non-reflective, dark gray background.
+      neg: ''
+      seed: 42
+      walk_seed: true
+      guidance_scale: 4
+      sample_steps: 20
+meta:
+  name: cashew_lora
+  version: '1.0'

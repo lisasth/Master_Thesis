@@ -2,6 +2,8 @@
 
 This project provides a complete, end-to-end pipeline for generating, evaluating, and analyzing synthetic image data for industrial computer vision tasks. The workflow starts with raw image collection and finishes with a comprehensive set of performance metrics and plots comparing different generative models (GANs vs. DMs) and data compositions.
 
+![Framework](frameworkdesign.png)
+
 ---
 ## Prerequisites
 
@@ -103,6 +105,8 @@ python wise-ft-clip/src/wise_ft.py \
 - Sometimes you first need to run: ```bash export PYTHONPATH="$PYTHONPATH:$PWD" ```
 
 ### 4. Organize Checkpoints
+**Important note**: Due to their large size, the final trained model checkpoint files (.pt) are not included in this repository. To run the evaluation pipeline (Steps 5 and beyond), you must first run the training step (Step 3) to generate these files and then manually place them into the models/ directory as described below.
+
 - Action: This is a manual or scripted step to prepare for evaluation.
 
 - Purpose: Copy the best checkpoint from each training run in Step 3 into a single models/ directory and rename it according to the convention ratio_model_product.pt.
