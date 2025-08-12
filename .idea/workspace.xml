@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4024634-a700-43e3-a5be-59de062630f3" name="Changes" comment="data">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f4024634-a700-43e3-a5be-59de062630f3" name="Changes" comment="Workflow and Lora">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lora/cashew_lora/cashew_lora.safetensors" beforeDir="false" afterPath="$PROJECT_DIR$/lora/cashew_lora/cashew_lora.safetensors" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lora/cashew_lora/cashew_lora_000001600.safetensors" beforeDir="false" afterPath="$PROJECT_DIR$/lora/cashew_lora/cashew_lora_000001600.safetensors" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lora/cashew_lora/cashew_lora_000001700.safetensors" beforeDir="false" afterPath="$PROJECT_DIR$/lora/cashew_lora/cashew_lora_000001700.safetensors" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lora/cashew_lora/cashew_lora_000001800.safetensors" beforeDir="false" afterPath="$PROJECT_DIR$/lora/cashew_lora/cashew_lora_000001800.safetensors" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lora/cashew_lora/cashew_lora_000001900.safetensors" beforeDir="false" afterPath="$PROJECT_DIR$/lora/cashew_lora/cashew_lora_000001900.safetensors" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lora/cashew_lora/optimizer.pt" beforeDir="false" afterPath="$PROJECT_DIR$/lora/cashew_lora/optimizer.pt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +103,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753798814016</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Workflow and Lora">
+      <option name="closed" value="true" />
+      <created>1754923325446</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1754923325447</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,6 +127,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="data" />
-    <option name="LAST_COMMIT_MESSAGE" value="data" />
+    <MESSAGE value="Workflow and Lora" />
+    <option name="LAST_COMMIT_MESSAGE" value="Workflow and Lora" />
   </component>
 </project>
