@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4024634-a700-43e3-a5be-59de062630f3" name="Changes" comment="Data folders" />
+    <list default="true" id="f4024634-a700-43e3-a5be-59de062630f3" name="Changes" comment="Data folders structure">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +31,9 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="30YJpHz0uiJG5G8G4e7JQyj9wHZ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -39,15 +43,16 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/stuch/PycharmProjects/Master_Thesis/lora"
+    "last_opened_file_path": "/Users/stuch/PycharmProjects/Master_Thesis/data/test/donuts/good"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lora" />
-      <recent name="$PROJECT_DIR$/comfyUIworkflows" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/wise-ft-clip" />
+      <recent name="$PROJECT_DIR$/data/test/donuts/good" />
+      <recent name="$PROJECT_DIR$/data/test/donuts/bad" />
+      <recent name="$PROJECT_DIR$/data/test/croissant/good" />
+      <recent name="$PROJECT_DIR$/data/test/croissant/bad" />
+      <recent name="$PROJECT_DIR$/data/single/Donuts_GAN/syn/NIO" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -165,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754985050343</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Data folders structure">
+      <option name="closed" value="true" />
+      <created>1754985474594</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1754985474594</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -189,6 +202,7 @@
     <MESSAGE value="Donut models 2" />
     <MESSAGE value="Updated README" />
     <MESSAGE value="Data folders" />
-    <option name="LAST_COMMIT_MESSAGE" value="Data folders" />
+    <MESSAGE value="Data folders structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Data folders structure" />
   </component>
 </project>
